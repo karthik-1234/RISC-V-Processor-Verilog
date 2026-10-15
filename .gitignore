@@ -1,0 +1,13 @@
+# Compiled simulation outputs
+alu_sim
+*.vvp
+
+# Waveform files
+*.vcd
+*.fst
+
+# macOS files
+.DS_Store
+
+# Editor settings
+.vscode/
