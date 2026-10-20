@@ -6,28 +6,37 @@ functional verification, and computer architecture.
 ## Project Status
 
 ### Completed
+
 - [x] 32-bit Arithmetic Logic Unit (ALU)
-- [x] Directed testbench with 16 test cases
-- [x] Arithmetic, bitwise, shift, and comparison operations
-- [x] Edge-case testing for arithmetic wraparound
+- [x] ALU supports ADD, SUB, AND, OR, XOR, SLL, SRL, SRA, SLT, and SLTU
+- [x] ALU testbench with 16 directed test cases
+- [x] ALU edge-case testing
+- [x] 32 x 32-bit register file
+- [x] Two combinational read ports
+- [x] One synchronous write port
+- [x] Register x0 always reads as zero
+- [x] Register-file testbench with 41 passing checks
+- [x] Tests covering all writable registers (x1-x31)
 
 ### Planned
-- [ ] Register file
+
 - [ ] Instruction decoder
 - [ ] Immediate generator
 - [ ] Program counter
 - [ ] Instruction and data memories
 - [ ] Single-cycle RISC-V processor
-- [ ] Expanded verification with randomized tests
+- [ ] Expanded ALU verification with randomized tests
 
 ## Project Structure
 
 ```text
 RISC-V-Processor-Verilog/
 ├── rtl/
-│   └── alu.v
+│   ├── alu.v
+│   └── register_file.v
 ├── tb/
-│   └── tb_alu.v
+│   ├── tb_alu.v
+│   └── tb_register_file.v
 ├── programs/
 ├── docs/
 ├── .gitignore
